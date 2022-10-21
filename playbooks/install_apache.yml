@@ -1,0 +1,19 @@
+---
+
+- hosts: centos8
+  become: yes
+
+  tasks: 
+
+    - name: Install apache pkg
+      yum:
+        name: httpd
+        state: present
+        use_backend: dnf
+
+
+    - name: start apache service
+      systemd:
+        name: httpd
+        state: started
+        enabled: yes
