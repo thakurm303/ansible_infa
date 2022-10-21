@@ -1,0 +1,15 @@
+---
+
+- hosts: centos
+
+  
+
+  tasks:
+
+    - name: print message using debug
+      debug:
+        msg: "Hello, We are learning Ansible"
+
+
+    - debug:
+        msg: "Hello Ketan"

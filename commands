@@ -1,0 +1,3 @@
+ansible-playbook -i inventory playbooks/eg_debug.yaml --list-hosts
+
+ansible-playbook -i inventory playbooks/eg_debug.yaml --limit server2
