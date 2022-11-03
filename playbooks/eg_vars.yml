@@ -1,10 +1,13 @@
 ---
 
+# HOw to print the variables
+
 - hosts: centos8
 
   vars:
     name: geeko
     lastname: salion
+    email: geeko@example.com
 
 
   tasks:
@@ -14,3 +17,15 @@
 
     - debug:
         msg: "My Os is {{ ansible_distribution }}"
+
+    - name: print email address
+      debug:
+        var: email
+
+    - name: print email 
+      debug:
+        msg: "{{ email }}"
+
+    - name: print IP address
+      debug:
+        msg: "{{ ansible_all_ipv4_addresses }}"

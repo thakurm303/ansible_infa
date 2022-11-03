@@ -1,0 +1,17 @@
+---
+
+- hosts: centos8
+
+  tasks:
+
+    - name: register server uptime
+      command: uptime
+      register: up_output
+
+    - name: print server uptime
+      debug:
+        var: up_output
+
+    - name: print server uptime
+      debug:
+        var: up_output.stdout
