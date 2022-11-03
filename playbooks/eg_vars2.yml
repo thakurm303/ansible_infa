@@ -8,3 +8,5 @@
 
     - debug:
         msg: "Kernel version is {{ ansible_kernel }}"
+
+    - debug: msg="Hello"
