@@ -1,0 +1,10 @@
+---
+
+- hosts: ubuntu
+
+  tasks:
+
+    - debug: msg="{{ ansible_distribution }}"
+
+    - debug:
+        msg: "Kernel version is {{ ansible_kernel }}"

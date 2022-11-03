@@ -1,15 +1,13 @@
 ---
 
-- hosts: centos
-
-  
-
+- hosts: centos8
   tasks:
 
-    - name: print message using debug
+    - name: print hello
       debug:
-        msg: "Hello, We are learning Ansible"
+        msg: "Good Morning Manoj"
 
 
-    - debug:
-        msg: "Hello Ketan"
+
+
+

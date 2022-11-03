@@ -1,0 +1,16 @@
+---
+
+- hosts: centos8
+
+  vars:
+    name: geeko
+    lastname: salion
+
+
+  tasks:
+
+    - debug: 
+        msg: "User name is {{ name }}"
+
+    - debug:
+        msg: "My Os is {{ ansible_distribution }}"
