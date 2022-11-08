@@ -32,3 +32,7 @@ server2
 
 [ubuntu]
 server4
+
+[amazon]
+
+192.168.56.111

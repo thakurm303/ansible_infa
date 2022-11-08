@@ -1,19 +1,31 @@
 ---
 
-- hosts: centos8
+- hosts: amazon
   become: yes
+
+  vars:
+    package: httpd
+    service_name: httpd
+
+
+
+
 
   tasks: 
 
     - name: Install apache pkg
       yum:
-        name: httpd
+        name: "{{ package }}"
         state: present
-        use_backend: dnf
+        #use_backend: dnf
+      notify:
+        - start apache service
 
+
+  handlers:
 
     - name: start apache service
       systemd:
-        name: httpd
+        name: "{{ service_name }}"
         state: started
         enabled: yes
